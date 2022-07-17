@@ -37,6 +37,8 @@ dependencies:
   stacked: ^2.3.13
   velocity_x: ^3.5.1
   auto_route: ^4.2.1
+  auth_buttons: ^3.0.0
+  dio: ^4.0.6
 
 dev_dependencies:
   
