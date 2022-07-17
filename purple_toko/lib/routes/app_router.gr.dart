@@ -34,16 +34,15 @@ class AppRouter extends _i3.RootStackRouter {
 
   @override
   List<_i3.RouteConfig> get routes => [
-        _i3.RouteConfig(LoginRoute.name, path: '/'),
-        _i3.RouteConfig(AllNearbyProductsRoute.name,
-            path: '/all-nearby-products-screen')
+        _i3.RouteConfig(LoginRoute.name, path: '/login-screen'),
+        _i3.RouteConfig(AllNearbyProductsRoute.name, path: '/')
       ];
 }
 
 /// generated route for
 /// [_i1.LoginScreen]
 class LoginRoute extends _i3.PageRouteInfo<void> {
-  const LoginRoute() : super(LoginRoute.name, path: '/');
+  const LoginRoute() : super(LoginRoute.name, path: '/login-screen');
 
   static const String name = 'LoginRoute';
 }
@@ -52,7 +51,7 @@ class LoginRoute extends _i3.PageRouteInfo<void> {
 /// [_i2.AllNearbyProductsScreen]
 class AllNearbyProductsRoute extends _i3.PageRouteInfo<void> {
   const AllNearbyProductsRoute()
-      : super(AllNearbyProductsRoute.name, path: '/all-nearby-products-screen');
+      : super(AllNearbyProductsRoute.name, path: '/');
 
   static const String name = 'AllNearbyProductsRoute';
 }

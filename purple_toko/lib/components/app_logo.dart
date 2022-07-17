@@ -4,7 +4,8 @@ import 'package:velocity_x/velocity_x.dart';
 import '../constants/app_colors.dart';
 
 class AppLogo extends StatelessWidget {
-  const AppLogo({Key? key}) : super(key: key);
+  const AppLogo({Key? key, required this.isSmall}) : super(key: key);
+  final bool isSmall;
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +15,8 @@ class AppLogo extends StatelessWidget {
           children: [
             Center(
               child: Container(
-                height: 100,
-                width: 100,
+                height: isSmall ? 50 : 100,
+                width: isSmall ? 50 : 100,
                 decoration: BoxDecoration(
                   color: AppColors.secondaryColor,
                   borderRadius: BorderRadius.circular(5),
@@ -24,12 +25,12 @@ class AppLogo extends StatelessWidget {
             ),
             Center(
               child: SizedBox(
-                height: 100,
-                width: 100,
+                height: isSmall ? 50 : 100,
+                width: isSmall ? 50 : 100,
                 child: Center(
                   child: Container(
-                    height: 70,
-                    width: 70,
+                    height: isSmall ? 35 : 50,
+                    width: isSmall ? 35 : 50,
                     decoration: const BoxDecoration(
                       color: AppColors.primaryColor,
                       shape: BoxShape.circle,
@@ -40,31 +41,31 @@ class AppLogo extends StatelessWidget {
             ),
             Center(
               child: SizedBox(
-                height: 100,
-                width: 100,
+                height: isSmall ? 50 : 100,
+                width: isSmall ? 50 : 100,
                 child: Center(
                     child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Container(
-                      height: 10,
-                      width: 40,
+                      height: isSmall ? 5 : 10,
+                      width: isSmall ? 15 : 40,
                       color: AppColors.secondaryColor,
                     ),
                     SizedBox(
-                      width: 40,
+                      width: isSmall ? 15 : 40,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Container(
                             color: AppColors.secondaryColor,
-                            height: 30,
-                            width: 10,
+                            height: isSmall ? 15 : 30,
+                            width: 5,
                           ),
                           Container(
                             color: AppColors.secondaryColor,
-                            height: 30,
-                            width: 10,
+                            height: isSmall ? 15 : 30,
+                            width: 5,
                           )
                         ],
                       ),
@@ -75,29 +76,36 @@ class AppLogo extends StatelessWidget {
             ),
           ],
         ),
-        16.heightBox,
-        "P"
-            .richText
-            .color(AppColors.secondaryColor)
-            .size(48)
-            .bold
-            .withTextSpanChildren([
-          const TextSpan(
-              text: 'urple',
-              style: TextStyle(
-                  color: Colors.black54,
-                  fontSize: 24,
-                  fontWeight: FontWeight.normal)),
-          const TextSpan(
-            text: 'T',
+        Visibility(
+          visible: !isSmall,
+          child: Column(
+            children: [
+              16.heightBox,
+              "P"
+                  .richText
+                  .color(AppColors.secondaryColor)
+                  .size(48)
+                  .bold
+                  .withTextSpanChildren([
+                const TextSpan(
+                    text: 'urple',
+                    style: TextStyle(
+                        color: Colors.black54,
+                        fontSize: 24,
+                        fontWeight: FontWeight.normal)),
+                const TextSpan(
+                  text: 'T',
+                ),
+                const TextSpan(
+                    text: 'oko',
+                    style: TextStyle(
+                        color: Colors.black54,
+                        fontSize: 24,
+                        fontWeight: FontWeight.normal)),
+              ]).makeCentered(),
+            ],
           ),
-          const TextSpan(
-              text: 'oko',
-              style: TextStyle(
-                  color: Colors.black54,
-                  fontSize: 24,
-                  fontWeight: FontWeight.normal)),
-        ]).makeCentered()
+        )
       ],
     );
   }

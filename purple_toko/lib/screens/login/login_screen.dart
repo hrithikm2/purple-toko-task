@@ -32,7 +32,9 @@ class LoginScreen extends StatelessWidget {
                 shrinkWrap: true,
                 padding: const EdgeInsets.all(24),
                 children: [
-                  const AppLogo(),
+                  const AppLogo(
+                    isSmall: false,
+                  ),
                   32.heightBox,
                   AppTextField(
                     validator: (val) => model.emailValidator(val),
