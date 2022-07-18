@@ -28,11 +28,11 @@ class LoginScreenViewModel extends BaseViewModel {
   }
 
   void onFbTapped(BuildContext context) {
-    Functions.showSnackBar(context, "This should login user with FB");
+    Functions.showSnackBar(context, "This should log the in user with FB");
   }
 
   void onGoogleTapped(BuildContext context) {
-    Functions.showSnackBar(context, "This should login user with Google");
+    Functions.showSnackBar(context, "This should log the in user with Google");
   }
 
   String? emailValidator(String? val) {

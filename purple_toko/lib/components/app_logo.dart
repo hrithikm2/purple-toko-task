@@ -29,8 +29,8 @@ class AppLogo extends StatelessWidget {
                 width: isSmall ? 50 : 100,
                 child: Center(
                   child: Container(
-                    height: isSmall ? 35 : 50,
-                    width: isSmall ? 35 : 50,
+                    height: isSmall ? 35 : 75,
+                    width: isSmall ? 35 : 75,
                     decoration: const BoxDecoration(
                       color: AppColors.primaryColor,
                       shape: BoxShape.circle,
@@ -60,12 +60,12 @@ class AppLogo extends StatelessWidget {
                           Container(
                             color: AppColors.secondaryColor,
                             height: isSmall ? 15 : 30,
-                            width: 5,
+                            width: isSmall ? 5 : 10,
                           ),
                           Container(
                             color: AppColors.secondaryColor,
                             height: isSmall ? 15 : 30,
-                            width: 5,
+                            width: isSmall ? 5 : 10,
                           )
                         ],
                       ),

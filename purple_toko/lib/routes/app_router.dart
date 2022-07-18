@@ -3,9 +3,7 @@ import 'package:purple_toko/screens/all_nearby_products/all_nearby_products_scre
 import '../screens/login/login_screen.dart';
 
 @AdaptiveAutoRouter(replaceInRouteName: 'Screen,Route', routes: <AutoRoute>[
-  AutoRoute(
-    page: LoginScreen,
-  ),
-  AutoRoute(page: AllNearbyProductsScreen, initial: true)
+  AutoRoute(page: LoginScreen, initial: true),
+  AutoRoute(page: AllNearbyProductsScreen)
 ])
 class $AppRouter {}
