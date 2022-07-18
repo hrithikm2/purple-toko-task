@@ -60,8 +60,9 @@ class LoginScreenViewModel extends BaseViewModel {
         context.router.pushAndPopUntil(const AllNearbyProductsRoute(),
             predicate: (rtr) => false);
       } else {
-        Functions.showSnackBar(
-            context, "Something went wrong, please try again!");
+        Future.delayed(const Duration(seconds: 1)).then((value) =>
+            Functions.showSnackBar(
+                context, "Something went wrong, please try again!"));
       }
     } else {}
   }
