@@ -266,7 +266,8 @@ class AllNearbyProductsScreen extends StatelessWidget {
                     color: Colors.black.withOpacity(0.2),
                     height: H(context) * 100,
                     width: W(context) * 100,
-                    child: const CircularProgressIndicator.adaptive()))
+                    child: const Center(
+                        child: CircularProgressIndicator.adaptive())))
           ],
         ));
   }
